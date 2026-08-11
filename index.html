@@ -1,0 +1,164 @@
+<!doctype html>
+<!--
+  The root of the GitHub Pages site. App Store Connect wants a support URL and
+  a privacy policy URL; this page is what a player finds if they trim those
+  back to the domain.
+
+  BEFORE PUBLISHING, CHECK:
+    1. The App Store button below — it currently points at a placeholder.
+       Replace APPSTORE_ID once the app has one, or delete the button.
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuildUp — From Shack to Skyscraper</title>
+<meta name="description" content="A calm 3D puzzle game. Merge buildings, grow a city, from a shack to a skyscraper.">
+<meta property="og:title" content="BuildUp — From Shack to Skyscraper">
+<meta property="og:description" content="A calm 3D puzzle game. Merge buildings, grow a city, from a shack to a skyscraper.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #F2EFE9;
+    --card: #FAF8F4;
+    --ink: #4A4640;
+    --ink-soft: #8A8279;
+    --line: #D8D2C6;
+    --accent: #63884E;
+    --sky-high: #AFC8D9;
+    --sky-low: #DCE8EE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #23211E;
+      --card: #2C2A26;
+      --ink: #EDE9E1;
+      --ink-soft: #A8A198;
+      --line: #3C3934;
+      --accent: #9CBE84;
+      --sky-high: #35434D;
+      --sky-low: #2A3238;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 80px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  .hero {
+    margin: 24px 0 0;
+    padding: 56px 28px 48px;
+    border-radius: 28px;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, var(--sky-high), var(--sky-low));
+    text-align: center;
+  }
+  .mark {
+    display: block; margin: 0 auto 20px;
+    width: 132px; height: 132px;
+  }
+  h1 { font-size: 40px; line-height: 1.1; margin: 0 0 6px; }
+  .tagline {
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 700; color: var(--ink-soft); margin: 0;
+  }
+
+  .lede { font-size: 18px; margin: 32px 0 0; }
+  h2 { font-size: 21px; margin: 40px 0 8px; }
+  ul { padding-left: 20px; }
+  li { margin: 8px 0; }
+  a { color: var(--accent); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; }
+  .btn {
+    display: inline-block; padding: 13px 22px; border-radius: 16px;
+    text-decoration: none; font-weight: 700; font-size: 15px;
+    background: var(--card); border: 1px solid var(--line); color: var(--ink);
+  }
+  .btn.primary { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 14px; }
+  footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <!-- The board and three buildings, drawn the way the game draws them:
+       flat colour, one light source, no outlines. -->
+  <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="A small isometric city block">
+    <g transform="translate(60 74)">
+      <path d="M0 -30 L52 0 L0 30 L-52 0 Z" fill="#E3DED4"/>
+      <path d="M-52 0 L0 30 L0 36 L-52 6 Z" fill="#CBC4B6"/>
+      <path d="M52 0 L0 30 L0 36 L52 6 Z" fill="#D3CCBE"/>
+      <g transform="translate(-24 -6)">
+        <path d="M0 0 L14 -8 L14 -20 L0 -12 Z" fill="#B09B7F"/>
+        <path d="M0 0 L-14 -8 L-14 -20 L0 -12 Z" fill="#96806A"/>
+        <path d="M0 -12 L14 -20 L0 -28 L-14 -20 Z" fill="#A68C79"/>
+      </g>
+      <g transform="translate(0 2)">
+        <path d="M0 0 L16 -9 L16 -31 L0 -22 Z" fill="#9E9C96"/>
+        <path d="M0 0 L-16 -9 L-16 -31 L0 -22 Z" fill="#8B8A85"/>
+        <path d="M0 -22 L16 -31 L0 -40 L-16 -31 Z" fill="#B5B3AD"/>
+      </g>
+      <g transform="translate(26 -4)">
+        <path d="M0 0 L13 -7 L13 -44 L0 -37 Z" fill="#61707C"/>
+        <path d="M0 0 L-13 -7 L-13 -44 L0 -37 Z" fill="#55626D"/>
+        <path d="M0 -37 L13 -44 L0 -51 L-13 -44 Z" fill="#869CA8"/>
+      </g>
+    </g>
+  </svg>
+
+  <h1>BuildUp</h1>
+  <p class="tagline">From Shack to Skyscraper</p>
+</div>
+
+<p class="lede">A calm 3D puzzle game. Swipe to slide the board, merge two of
+the same building into the next one up, and grow a city from a lopsided shack to
+a landmark tower — eleven levels, no timers, no lives.</p>
+
+<h2>What's inside</h2>
+<ul>
+  <li>Eleven buildings, read by silhouette rather than by number</li>
+  <li>Five places to build above — Canada, Switzerland, Egypt, Japan, Greece —
+  each with its own landscape, palette and instrument</li>
+  <li>Music that is played rather than looped: a koto in Japan, an oud over a
+  darbuka in Egypt, an alphorn in Switzerland</li>
+  <li>Game Center achievements and leaderboard</li>
+  <li>A power-saving theme that renders nothing at all</li>
+  <li>English and Turkish</li>
+</ul>
+
+<div class="actions">
+  <a class="btn primary" href="https://apps.apple.com/app/idAPPSTORE_ID">Download on the App Store</a>
+  <a class="btn" href="support.html">Support</a>
+</div>
+
+<h2>Pages</h2>
+<ul>
+  <li><a href="support.html">Support</a> — answers, and how to reach us</li>
+  <li><a href="privacy-policy.html">Privacy Policy</a> — what is collected, and
+  what is not</li>
+  <li><a href="terms-of-use.html">Terms of Use</a></li>
+</ul>
+
+<h2>Contact</h2>
+<p><a href="mailto:support@turnaworks.com">support@turnaworks.com</a></p>
+
+<footer>
+  <p><a href="privacy-policy.html">Privacy Policy</a> ·
+  <a href="terms-of-use.html">Terms of Use</a> ·
+  <a href="support.html">Support</a></p>
+  <p>© 2026 <a href="https://turnaworks.com">Turnaworks</a></p>
+</footer>
+
+</div>
+</body>
+</html>
